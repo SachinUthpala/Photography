@@ -35,7 +35,11 @@ if(isset($_POST['login'])){
     }
 
 }else if(isset($_POST['signup'])){
-    
+    $username = $_POST['username'];
+    $Password = $_POST['password'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+
 }
 
 
