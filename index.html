@@ -84,7 +84,7 @@
                     <a href="package.html" class="nav-item nav-link">Packages</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="./Login/login.html" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <a href="#" onclick="showLogin()" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
             </div>
         </nav>
 
@@ -502,7 +502,7 @@
 
 
     <!-- login  form -->
-    <div class="wrapper">
+    <div class="wrapper" id="login">
         <form action="#">
           <h2>Login</h2>
             <div class="input-field">
@@ -523,6 +523,7 @@
           <button type="submit">Log In</button>
           <div class="register">
             <p>Don't have an account? <a href="#">Register</a></p>
+            <p onclick="hideLogin()">Don't have an account? <a href="#">Close Login</a></p>
           </div>
         </form>
       </div>
@@ -531,3 +532,21 @@
 </body>
 
 </html>
+
+
+<script>
+
+    const showLogin = () => {
+        document.getElementById("login").style.display = "block";
+        document.getElementById("signup").style.display = "none";
+    }
+    const showsignup = () => {
+        document.getElementById("signup").style.display = "block";
+        document.getElementById("login").style.display = "none";
+    }
+
+    const hideLogin = () => {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("signup").style.display = "none";
+    }
+</script>

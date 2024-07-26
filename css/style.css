@@ -444,6 +444,10 @@
 
 
 /* login form */
+#login{
+    display: none;
+}
+
 
 .wrapper {
     position: fixed;
