@@ -40,7 +40,14 @@ if(isset($_POST['login'])){
     $phone = $_POST['phone'];
     $email = $_POST['email'];
 
-    
+    $sql = "INSERT INTO `users`( `name`, `email`, `password`, `phone`) 
+    VALUES ('$username' , '$email' , '$Password' , '$phone')";
+
+    if($conn->query($sql)){
+        echo "Register sucessfull";
+    }else{
+        echo "Register unsucessfull";
+    }
 }
 
 
