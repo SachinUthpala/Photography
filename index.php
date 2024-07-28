@@ -103,7 +103,7 @@ $email = $_SESSION['email'];
                 </div>
                 <?php
                 if($name != null){
-                    echo "profile";
+                    echo '<a href="profile.php" class="nav-item nav-link"><img src="./img/user.png" alt="" width="50px"></a>';
                 }else{
                     echo '<a href="#" onclick="showLogin()" class="btn btn-primary rounded-pill py-2 px-4">Register</a>';
                 }
