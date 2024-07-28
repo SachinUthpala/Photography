@@ -16,7 +16,9 @@ if(isset($_POST['login'])){
         $row = $result_emailCheck->fetch_ASSOC();
 
         if($Password == $row['password']){
-
+            $_SESSION['name'] = $row['name'] ;
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['admin'] = $row['admin'] ;
             $_SESSION["loginSuccess"] = 1;
              echo "login sucess";
 
@@ -42,8 +44,15 @@ if(isset($_POST['login'])){
     VALUES ('$username' , '$email' , '$Password' , '$phone')";
 
     if($conn->query($sql)){
+        $_SESSION['name'] = $username;
+        $_SESSION['email'] = $email;
+        $_SESSION['admin'] = 0;
+        $_SESSION['Register_Sucessfull'] = 1;
+        header("Location : ../../index.php");
         echo "Register sucessfull";
     }else{
+        $_SESSION['Register_Unsusessfull'] = 1;
+        header("Location : ../../index.php");
         echo "Register unsucessfull";
     }
 }

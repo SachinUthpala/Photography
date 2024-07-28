@@ -1,3 +1,17 @@
+
+<!-- db connection  -->
+ <?php
+
+require_once './backEnd/DbConnection/db.conn.php';
+session_start();
+
+$admin_access = $_SESSION['admin'];
+$name = $_SESSION['name'];
+$email = $_SESSION['email'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
