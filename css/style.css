@@ -457,7 +457,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate(125% , 18%);
+    transform: translate(125% , 15%);
     z-index: 100000;
     width: 400px;
     border-radius: 8px;
