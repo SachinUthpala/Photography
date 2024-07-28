@@ -84,7 +84,7 @@
                     <a href="package.html" class="nav-item nav-link">Packages</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="./Login/login.html" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <a href="#" onclick="showLogin()" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
             </div>
         </nav>
 
@@ -297,6 +297,74 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    
+        <!-- login  form -->
+        <div class="wrapper" id="login">
+            <form action="./backEnd/Login/login.php" method="post" autocomplete="off">
+              <h2>Login</h2>
+                <div class="input-field">
+                <input type="email" required name="email" >
+                <label>Enter your email</label>
+              </div>
+              <div class="input-field">
+                <input type="password" required name="password" >
+                <label>Enter your password</label>
+              </div>
+              <button type="submit" name="login">Log In</button>
+              <div class="register">
+                <p onclick="showsignup()">Don't have an account? <a href="#">Register</a></p>
+                <p onclick="hideLogin()">Don't have an account? <a href="#">Close Login</a></p>
+              </div>
+            </form>
+          </div>
+    
+          <!-- end of login -->
+    
+          <!-- register form -->
+          <div class="wrapper" id="signup">
+            <form action="./backEnd/Login/login.php" method="post"  autocomplete="off">
+              <h2>Register</h2>
+              <div class="input-field">
+                <input type="text" required name="username">
+                <label>Enter your name</label>
+              </div>
+              <div class="input-field">
+                <input type="text" required  name="phone">
+                <label>Enter your phone</label>
+              </div>
+             <div class="input-field">
+                <input type="email" required name="email" >
+                <label>Enter your email</label>
+              </div>
+              <div class="input-field">
+                <input type="password" required  name="password">
+                <label>Enter your password</label>
+              </div>
+              
+              
+              <button type="submit" name="signup">Sign Up</button>
+            </form>
+          </div>
+           <!-- end of register form -->
+
+
+           <script>
+
+            const showLogin = () => {
+                document.getElementById("login").style.display = "block";
+                document.getElementById("signup").style.display = "none";
+            }
+            const showsignup = () => {
+                document.getElementById("signup").style.display = "block";
+                document.getElementById("login").style.display = "none";
+            }
+        
+            const hideLogin = () => {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("signup").style.display = "none";
+            }
+        </script>
 </body>
 
 </html>
