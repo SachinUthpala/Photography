@@ -525,30 +525,27 @@
 
       <!-- register form -->
       <div class="wrapper" id="signup">
-        <form action="#" autocomplete="off">
+        <form action="./backEnd/Login/login.php" method="post"  autocomplete="off">
           <h2>Register</h2>
           <div class="input-field">
-            <input type="text" required >
+            <input type="text" required name="username">
             <label>Enter your name</label>
           </div>
           <div class="input-field">
-            <input type="text" required >
+            <input type="text" required  name="phone">
             <label>Enter your phone</label>
           </div>
          <div class="input-field">
-            <input type="text" required >
+            <input type="email" required name="email" >
             <label>Enter your email</label>
           </div>
           <div class="input-field">
-            <input type="password" required >
+            <input type="password" required  name="password">
             <label>Enter your password</label>
           </div>
           
           
-          <button type="submit">Log In</button>
-          <div class="register">
-            <p onclick="showLogin()">Don't have an account? <a href="#">Register</a></p>
-          </div>
+          <button type="submit" name="signup">Sign Up</button>
         </form>
       </div>
        <!-- end of register form -->

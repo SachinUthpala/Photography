@@ -40,8 +40,7 @@ if(isset($_POST['login'])){
     $phone = $_POST['phone'];
     $email = $_POST['email'];
 
-    echo $username.' - '.$Password;
-
+    
 }
 
 
