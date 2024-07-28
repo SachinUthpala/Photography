@@ -444,6 +444,10 @@
 
 
 /* login form */
+#signup{
+    display: none;
+}
+
 #login{
     display: none;
 }

@@ -522,13 +522,40 @@
           </div>
           <button type="submit">Log In</button>
           <div class="register">
-            <p>Don't have an account? <a href="#">Register</a></p>
+            <p onclick="showsignup()">Don't have an account? <a href="#">Register</a></p>
             <p onclick="hideLogin()">Don't have an account? <a href="#">Close Login</a></p>
           </div>
         </form>
       </div>
 
       <!-- end of login -->
+
+      <!-- register form -->
+      <div class="wrapper" id="signup">
+        <form action="#">
+          <h2>Register</h2>
+          <div class="input-field">
+            <input type="text" required>
+            <label>Enter your name</label>
+          </div>
+         <div class="input-field">
+            <input type="text" required>
+            <label>Enter your email</label>
+          </div>
+          <div class="input-field">
+            <input type="password" required>
+            <label>Enter your password</label>
+          </div>
+          
+          
+          <button type="submit">Log In</button>
+          <div class="register">
+            <p onclick="showLogin()">Don't have an account? <a href="#">Register</a></p>
+            <p onclick="hideLogin()">Don't have an account? <a href="#">Close Login</a></p>
+          </div>
+        </form>
+      </div>
+       <!-- end of register form -->
 </body>
 
 </html>
