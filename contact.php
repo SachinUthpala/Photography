@@ -85,7 +85,13 @@
                     <a href="package.php" class="nav-item nav-link">Packages</a>
                     <a href="contact.php" class="nav-item nav-link active">Contact</a>
                 </div>
-                <a href="#" onclick="showLogin()" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <?php
+                if($name != null){
+                    echo '<a href="./Profile/Profile.html" class="nav-item nav-link"><img src="./img/user.png" alt="" width="50px"></a>';
+                }else{
+                    echo '<a href="#" onclick="showLogin()" class="btn btn-primary rounded-pill py-2 px-4">Register</a>';
+                }
+                ?>
             </div>
         </nav>
 
