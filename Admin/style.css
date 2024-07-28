@@ -590,3 +590,29 @@ body {
 		min-width: 420px;
 	}
 }
+
+#profile{
+	display: none;
+	text-align: center;
+
+	form{
+		padding: 20px 100px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+
+		img{
+			width: 150px;
+			height: 150px;
+			padding: 5px;
+			border-radius: 100%;
+			border: 2px solid #DB504A;
+			margin-left: 40%;
+		}
+
+		.inputs{
+			padding: 15px 30px;
+		}
+	}
+}

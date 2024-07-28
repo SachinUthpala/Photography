@@ -9,7 +9,7 @@
 	<!-- My CSS -->
 	<link rel="stylesheet" href="style.css">
 
-	<title>AdminHub</title>
+	<title>ML Admin</title>
 </head>
 <body>
 
@@ -18,37 +18,31 @@
 	<section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i>
-			<span class="text">AdminHub</span>
+			<span class="text">ML Photography</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
-				<a href="#">
+				<a href="#" onclick="showDash()">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Dashboard</span>
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="#" onclick="showProfile()">
 					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">My Store</span>
+					<span class="text">Profile Settings</span>
 				</a>
 			</li>
 			<li>
 				<a href="#">
 					<i class='bx bxs-doughnut-chart' ></i>
-					<span class="text">Analytics</span>
+					<span class="text">User Bookings</span>
 				</a>
 			</li>
 			<li>
 				<a href="#">
 					<i class='bx bxs-message-dots' ></i>
-					<span class="text">Message</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-group' ></i>
-					<span class="text">Team</span>
+					<span class="text">Massages</span>
 				</a>
 			</li>
 		</ul>
@@ -96,7 +90,7 @@
 		<!-- NAVBAR -->
 
 		<!-- MAIN -->
-		<main>
+		<main id="dashbord">
 			<div class="head-title">
 				<div class="left">
 					<h1>Dashboard</h1>
@@ -232,8 +226,36 @@
 			</div>
 		</main>
 		<!-- MAIN -->
+
+		<!-- profile settings -->
+		<main id="profile">
+			<h1>Profile Settings</h1>
+			<form action="#" method="post">
+				<img src="../img/user.png" alt="">
+				<input type="text" name="name" id="" class="inputs">
+				<input type="email" name="email" id="" class="inputs">
+				<input type="text" name="phone" id="" class="inputs">
+				<input type="text" name="password" id="" class="inputs">
+				<input type="file" name="profileimg" id="" class="inputs">
+				<input type="submit" name="submit" value="Update" class="inputs">
+			</form>
+			
+		</main>
+		<!-- end of profile settings -->
 	</section>
 	<!-- CONTENT -->
+
+	<script>
+		const showProfile = () => {
+			document.getElementById("profile").style.display = "block";
+			document.getElementById("dashbord").style.display = "none";
+		}
+
+		const showDash = () => {
+			document.getElementById("profile").style.display = "none";
+			document.getElementById("dashbord").style.display = "block";
+		}
+	</script>
 	
 
 	<script src="script.js"></script>
