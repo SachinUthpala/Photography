@@ -1,7 +1,7 @@
 <?php
 
 require_once '../DbConnection/db.conn.php';
-
+session_start();
 
 if(isset($_POST['login'])){
     
@@ -48,11 +48,11 @@ if(isset($_POST['login'])){
         $_SESSION['email'] = $email;
         $_SESSION['admin'] = 0;
         $_SESSION['Register_Sucessfull'] = 1;
-        header("Location : ../../index.php");
+        header("Location: ../../index.php");
         echo "Register sucessfull";
     }else{
         $_SESSION['Register_Unsusessfull'] = 1;
-        header("Location : ../../index.php");
+        header("Location: ../../index.php");
         echo "Register unsucessfull";
     }
 }

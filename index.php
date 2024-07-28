@@ -2,6 +2,9 @@
 <!-- db connection  -->
  <?php
 
+ // Turn off all error reporting
+error_reporting(0);
+
 require_once './backEnd/DbConnection/db.conn.php';
 session_start();
 
@@ -98,7 +101,13 @@ $email = $_SESSION['email'];
                     <a href="package.php" class="nav-item nav-link">Packages</a>
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="#" onclick="showLogin()" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <?php
+                if($name != null){
+                    echo "profile";
+                }else{
+                    echo '<a href="#" onclick="showLogin()" class="btn btn-primary rounded-pill py-2 px-4">Register</a>';
+                }
+                ?>
             </div>
         </nav>
 
