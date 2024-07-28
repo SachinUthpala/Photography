@@ -20,17 +20,20 @@ if(isset($_POST['login'])){
             $_SESSION['email'] = $row['email'];
             $_SESSION['admin'] = $row['admin'] ;
             $_SESSION["loginSuccess"] = 1;
+            header("Location: ../../index.php");
              echo "login sucess";
 
         }else{
             echo "Wrong password";
             $_SESSION["SignUpError"] = 1;
+            header("Location: ../../index.php");
             
         }        
 
     }else{
         echo "wrong email";
         $_SESSION["SignUpError"] = 1;
+        header("Location: ../../index.php");
         
     }
 
