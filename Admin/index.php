@@ -54,7 +54,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#" class="logout">
+				<a href="#" onclick="logoutNoe()" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>
 					<span class="text">Logout</span>
 				</a>
@@ -256,8 +256,31 @@
 			document.getElementById("dashbord").style.display = "block";
 		}
 	</script>
+
+	<script>
+		const logoutNoe = () => {
+			Swal.fire({
+  title: "Are you sure?",
+  text: "You won't to logout!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!"
+}).then((result) => {
+  if (result.isConfirmed) {
+    location.href = '../backEnd/Logout/logout.php';
+  }
+});
+		}
+	</script>
 	
 
 	<script src="script.js"></script>
+
+	<!-- 
+		sweet alert 2 cdn
+	-->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
