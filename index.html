@@ -503,17 +503,17 @@
 
     <!-- login  form -->
     <div class="wrapper" id="login">
-        <form action="#" autocomplete="off">
+        <form action="./backEnd/Login/login.php" method="post" autocomplete="off">
           <h2>Login</h2>
             <div class="input-field">
-            <input type="text" required >
+            <input type="email" required name="email" >
             <label>Enter your email</label>
           </div>
           <div class="input-field">
-            <input type="password" required >
+            <input type="password" required name="password" >
             <label>Enter your password</label>
           </div>
-          <button type="submit">Log In</button>
+          <button type="submit" name="login">Log In</button>
           <div class="register">
             <p onclick="showsignup()">Don't have an account? <a href="#">Register</a></p>
             <p onclick="hideLogin()">Don't have an account? <a href="#">Close Login</a></p>

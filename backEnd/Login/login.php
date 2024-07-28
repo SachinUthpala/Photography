@@ -18,20 +18,18 @@ if(isset($_POST['login'])){
         if($Password == $row['password']){
 
             $_SESSION["loginSuccess"] = 1;
-            header("Location: ../../index.html"); 
+             echo "login sucess";
 
         }else{
+            echo "Wrong password";
             $_SESSION["SignUpError"] = 1;
-            header("Location: ../../Login/login.html"); 
-        }
-
-
-        $_SESSION["SignUpError"] = 1;
-        header("Location: ../../index.html"); 
+            
+        }        
 
     }else{
+        echo "wrong email";
         $_SESSION["SignUpError"] = 1;
-        header("Location: ../../index.html"); 
+        
     }
 
 }else if(isset($_POST['signup'])){
