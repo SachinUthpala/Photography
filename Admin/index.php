@@ -317,21 +317,21 @@ if(!$name){
 	</script>
 
 	<script>
-		const logoutNoe = () => {
-			Swal.fire({
-  title: "Are you sure?",
-  text: "You won't to logout!",
-  icon: "warning",
-  showCancelButton: true,
-  confirmButtonColor: "#3085d6",
-  cancelButtonColor: "#d33",
-  confirmButtonText: "Yes, delete it!"
-}).then((result) => {
-  if (result.isConfirmed) {
-    location.href = '../backEnd/Logout/logout.php';
-  }
-});
+				const logoutNoe = () => {
+					Swal.fire({
+		title: "Are you sure?",
+		text: "You won't to logout!",
+		icon: "warning",
+		showCancelButton: true,
+		confirmButtonColor: "#3085d6",
+		cancelButtonColor: "#d33",
+		confirmButtonText: "Yes, delete it!"
+		}).then((result) => {
+		if (result.isConfirmed) {
+			location.href = '../backEnd/Logout/logout.php';
 		}
+		});
+				}
 	</script>
 	
 
@@ -341,5 +341,7 @@ if(!$name){
 		sweet alert 2 cdn
 	-->
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </body>
 </html>
