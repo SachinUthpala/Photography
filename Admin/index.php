@@ -57,7 +57,7 @@ if(!$name){
 				</a>
 			</li>
 			<li>
-				<a href="#" onclick="showProfile()">
+				<a href="#" onclick="showDash()">
 					<i class='bx bxs-shopping-bag-alt' ></i>
 					<span class="text">My Bookings</span>
 				</a>
@@ -137,7 +137,13 @@ if(!$name){
 		<!-- NAVBAR -->
 
 		<!-- MAIN -->
-		<main id="dashbord">
+		<main id="dashbord"
+		<?php 
+				if($admin_access != 1){
+					echo 'style="display:none;"';
+				}
+			?>
+		>
 			<div class="head-title">
 				<div class="left">
 					<h1>Dashboard</h1>
@@ -275,7 +281,13 @@ if(!$name){
 		<!-- MAIN -->
 
 		<!-- profile settings -->
-		<main id="profile">
+		<main id="profile"
+		<?php 
+				if($admin_access != 1){
+					echo 'style="display:block;"';
+				}
+			?>
+		>
 			<h1>Profile Settings</h1>
 			<form action="#" method="post">
 				<img src="../img/user.png" alt="">
