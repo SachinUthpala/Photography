@@ -40,9 +40,15 @@ require_once '../backEnd/DbConnection/db.conn.php';
 				</a>
 			</li>
 			<li>
+				<a href="#" onclick="showProfile()">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">My Bookings</span>
+				</a>
+			</li>
+			<li>
 				<a href="#">
 					<i class='bx bxs-doughnut-chart' ></i>
-					<span class="text">User Bookings</span>
+					<span class="text">All Bookings</span>
 				</a>
 			</li>
 			<li>
