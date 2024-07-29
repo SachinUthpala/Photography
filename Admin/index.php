@@ -1,6 +1,6 @@
 <?php
 
-requ
+require_once '../backEnd/DbConnection/db.conn.php';
 
 ?>
 
