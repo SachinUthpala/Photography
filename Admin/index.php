@@ -8,6 +8,11 @@ $name = $_SESSION['name'];
 $email = $_SESSION['email'];
 $user_img = $_SESSION['user_img'];
 
+
+if(!$name){
+    header("Location:../index.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +38,13 @@ $user_img = $_SESSION['user_img'];
 			<span class="text">ML Photography</span>
 		</a>
 		<ul class="side-menu top">
-			<li class="active">
+			<li class="active"
+			<?php 
+				if($admin_access != 1){
+					echo 'style="display:none;"';
+				}
+			?>
+			>
 				<a href="#" onclick="showDash()">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Dashboard</span>
@@ -51,13 +62,25 @@ $user_img = $_SESSION['user_img'];
 					<span class="text">My Bookings</span>
 				</a>
 			</li>
-			<li>
+			<li
+			<?php 
+				if($admin_access != 1){
+					echo 'style="display:none;"';
+				}
+			?>
+			>
 				<a href="#">
 					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">All Bookings</span>
 				</a>
 			</li>
-			<li>
+			<li
+			<?php 
+				if($admin_access != 1){
+					echo 'style="display:none;"';
+				}
+			?>
+			>
 				<a href="#">
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">Massages</span>
@@ -65,7 +88,13 @@ $user_img = $_SESSION['user_img'];
 			</li>
 		</ul>
 		<ul class="side-menu">
-			<li>
+			<li 
+			<?php 
+				if($admin_access != 1){
+					echo 'style="display:none;"';
+				}
+			?>
+			>
 				<a href="#">
 					<i class='bx bxs-cog' ></i>
 					<span class="text">Settings</span>
