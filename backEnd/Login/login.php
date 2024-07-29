@@ -19,6 +19,7 @@ if(isset($_POST['login'])){
             $_SESSION['name'] = $row['name'] ;
             $_SESSION['email'] = $row['email'];
             $_SESSION['admin'] = $row['admin'] ;
+            $_SESSION['user_img'] = $row['img'] ;
             $_SESSION["loginSuccess"] = 1;
             header("Location: ../../index.php");
              echo "login sucess";

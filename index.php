@@ -11,6 +11,7 @@ session_start();
 $admin_access = $_SESSION['admin'];
 $name = $_SESSION['name'];
 $email = $_SESSION['email'];
+$user_img = $_SESSION['user_img'];
 
 ?>
 
@@ -103,7 +104,7 @@ $email = $_SESSION['email'];
                 </div>
                 <?php
                 if($name != null){
-                    echo '<a href="./Admin/index.php" class="nav-item nav-link"><img src="./img/user.png" alt="" width="50px"></a>';
+                     ?> <a href="./Admin/index.php" class="nav-item nav-link"><img src="<?php echo $user_img; ?>" alt="" width="50px"></a> <?php
                 }else{
                     echo '<a href="#" onclick="showLogin()" class="btn btn-primary rounded-pill py-2 px-4">Register</a>';
                 }

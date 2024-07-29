@@ -1,6 +1,12 @@
 <?php
 
 require_once '../backEnd/DbConnection/db.conn.php';
+session_start();
+
+$admin_access = $_SESSION['admin'];
+$name = $_SESSION['name'];
+$email = $_SESSION['email'];
+$user_img = $_SESSION['user_img'];
 
 ?>
 
