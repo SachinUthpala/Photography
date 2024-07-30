@@ -13,7 +13,10 @@ if(isset($_POST['create'])){
     $sql = "INSERT INTO `bookings`( `yourname`, `email`, `date`, `shootType`, `specialRequest`) 
     VALUES ('$name' , '$email' , '$date' , '$shootType' , '$massage')";
 
-    
+    if($conn->query($sql)){
+        $_SESSION['bookingCreated'] = 1;
+        header("Location: ../../index.php");
+    }
 }
 
 
